@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Version 8</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="baseConverter">
+      <h1>X:</h1>
+      <h1 id="xPosition"></h1>
+      <h1>Y:</h1>
+      <h1 id="yPosition"></h1>
+    </div>
+
+    <div id="baseConverterOptions">
+      <label><input type="checkbox" name="base" value="Roman" /> Roman</label>
+      <label><input type="checkbox" name="base" value="Binary" /> Binary</label>
+      <label
+        ><input type="checkbox" name="base" value="Hexadecimal" />
+        Hexadecimal</label
+      >
+      <label
+        ><input type="checkbox" name="base" value="Decimal" /> Decimal</label
+      >
+    </div>
+
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <div id="buttomItems">
+      <div id="directionButtons">
+        <button id="upEvent">UP</button>
+        <button id="downEvent">DOWN</button>
+        <button id="leftEvent">LEFT</button>
+        <button id="rightEvent">RIGHT</button>
+      </div>
+
+      <div id="butomSelectors">
+        <div id="shapeSelector">
+          <label
+            ><input type="checkbox" name="shape" value="Square" /> Square</label
+          >
+          <label
+            ><input type="checkbox" name="shape" value="Triangle" />
+            Triangle</label
+          >
+          <label
+            ><input type="checkbox" name="shape" value="Circle" /> Circle</label
+          >
+        </div>
+
+        <div id="compressionSelector">
+          <label
+            ><input type="checkbox" name="shape" value="Compressed" />
+            Compressed movement</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("shapeSelector")
+        .addEventListener("change", function (e) {
+          const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach((checkbox) => {
+            if (checkbox !== e.target) {
+              checkbox.checked = false;
+            }
+          });
+        });
+
+      document
+        .getElementById("baseConverterOptions")
+        .addEventListener("change", function (e) {
+          const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach((checkbox) => {
+            if (checkbox !== e.target) {
+              checkbox.checked = false;
+            }
+          });
+        });
+    </script>
+    <script src="coordinationFile.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Align items vertically */
+  height: 100vh;
+  margin: 0;
+}
+#myCanvas {
+  border: 2px solid black; /* Adds a black border around the canvas */
+  margin-top: 0px; /* Adds some space between the selector and the canvas */
+}
+
+.controls-wrapper {
+  display: flex; /* Aligns directionButtons and shapeSelector horizontally */
+  justify-content: center;
+  gap: 20px; /* Adds space between the directionButtons and the shapeSelector */
+}
+
+#directionButtons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust the space between buttons as needed */
+}
+
+#upEvent {
+  grid-column: 2;
+  grid-row: 1;
+}
+#downEvent {
+  grid-column: 2;
+  grid-row: 3;
+}
+#leftEvent {
+  grid-column: 1;
+  grid-row: 2;
+}
+#rightEvent {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+button {
+  padding: 10px; /* Adjust padding as needed */
+  cursor: pointer;
+}
+
+#baseConverter {
+  display: flex; /* This will layout its children inline */
+  align-items: center; /* This ensures the items are aligned in the middle vertically */
+  gap: 10px; /* Adds some space between each h1 element */
+}
+
+#baseConverter h1 {
+  margin: 0; /* Removes the default margin from h1 elements to prevent unnecessary spacing */
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+#buttomItems {
+  display: flex;
+  flex-direction: row;
+}
